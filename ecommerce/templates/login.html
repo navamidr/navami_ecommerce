@@ -1,0 +1,35 @@
+{% load static %}
+{% block content %}
+{% block metadescription %}
+    welcome to cart store
+{% endblock %}
+{% block title %}
+
+{% endblock %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="banner-text">
+                    <h3>Login</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login </title>
+</head>
+<body>
+<form action="login" method="POST"><br>
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="username"><br><br>
+    <input type="password" name="password" placeholder="password"><br><br>
+    <input type="submit" value="login">
+</form>
+
+</body>
+</html>
+{% endblock %}
